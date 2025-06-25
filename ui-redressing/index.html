@@ -1,0 +1,68 @@
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>UI Redressing Demo</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: #f2f2f2;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .layer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .real-button {
+            padding: 20px 40px;
+            font-size: 1.2em;
+            background: #2ecc71;
+            color: rgb(10, 1, 1);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            opacity: 0.01;
+            pointer-events: auto;
+            z-index: 1;
+        }
+
+        .fake-button {
+            padding: 20px 40px;
+            font-size: 1.2em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            z-index: 2;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1241.0" data-gr-ext-installed="">
+
+    <button class="layer real-button" onclick="alert('🎉 Lấy dữ liệu thành công!')">
+        ✅ Nút thật
+    </button>
+
+    <button class="layer fake-button">
+        🎁 Nhận thưởng ngay
+    </button>
+
+
+
+</body><ddict-div style="visibility: visible !important;"></ddict-div><grammarly-desktop-integration
+    data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+</html>
